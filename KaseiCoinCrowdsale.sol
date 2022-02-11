@@ -10,3 +10,8 @@ contract KaseiCoinCrowdsale is Crowdsale, MintedCrowdsale {
         address payable wallet, // sale beneficiary
         KaseiCoin token // The KaseiCoin itselfthat our contract will work with
     )
+     Crowdsale(rate, wallet, token)
+        public {
+            // Constructor can stay empty
+        }
+}
