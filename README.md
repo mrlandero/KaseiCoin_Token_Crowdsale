@@ -102,5 +102,31 @@ Step 10: `KaseiCoinCrowdsale` contract deployment
 
 ![KaseiCoinCrowdsale Contract Deployment](Evaluation_Evidence/ten_crowdsale_contract_deployment.png)
 
-TO deploy the `KaseiCoinCrowdsale` contract, we make sure we select the right contract from the dropdown list. In this case, we need to select `KaseiCoinCrowdsale - KaseiCoinCrowdsale.sol`. Then, from the `KaseiCoinCrowdsaleDeployer` contract functions, click on the `kasei_crowdsale_address` button. Copy the address that is returned. Then, just below the `Deploy` button, you will see a `At Address` button, followed by an input field. Make sure you paste the copied `kasei_crowdsale_address` and click the button. This will deploy the `KaseiCoinCrowdsale` contract.
+To deploy the `KaseiCoinCrowdsale` contract, we make sure we select the right contract from the dropdown list. In this case, we need to select `KaseiCoinCrowdsale - KaseiCoinCrowdsale.sol`. Then, from the `KaseiCoinCrowdsaleDeployer` contract functions, click on the `kasei_crowdsale_address` button. Copy the address that is returned. Then, just below the `Deploy` button, you will see a `At Address` button, followed by an input field. Make sure you paste the copied `kasei_crowdsale_address` and click the button. This will deploy the `KaseiCoinCrowdsale` contract.
 
+Step 11: `KaseiCoinCrowdsale` contract functions
+
+![KaseiCoinCrowdsale contract functions](Evaluation_Evidence/eleven_crowdsale_contract_functions.png)
+
+Once the `KaseiCoinCrowdsale` is deployed successfully, we can verify it by viewing its available functions. If no functions show up, we can determine that the contract did not deploy correctly. 
+We can see several avilable functions in this contract. We can use the `buyTokens`, `rate`, `token`, `wallet`, and `weiRaised` functions. The `weiRaised` function is extremely important for this Crowdsale, as it displays the amount of wei we have raised with the sell of our token. 
+
+Step 12: `KaseiCoin` Contract Deployment
+
+![KaseCoin Contract Deployment](Evaluation_Evidence/twelve_kaseicoin_contract_deployment.png)
+
+To deploy the `KaseiCoin` contract, we make sure we select the right contract from the dropdown list. In this case, we need to select `KaseiCoin - KaseiCoinMintable.sol`. Then, from the `KaseiCoinCrowdsaleDeployer` contract functions, click on the `kasei_token_address` button. Copy the address that is returned. Then, just below the `Deploy` button, you will see a `At Address` button, followed by an input field. Make sure you paste the copied `kasei_token_address` and click the button. This will deploy the `KaseiCoin` contract.
+
+Step 13: `KaseiCoin` Contract Functions
+
+![KaseiCoin Contract Functions](Evaluation_Evidence/thirteen_kaseicoin_contract_functions.png)
+
+Once the `KaseiCoin` is deployed successfully, we can verify it by viewing its available functions. If no functions show up, we can determine that the contract did not deploy correctly. 
+We can see several avilable functions in this contract. We can use the `addMinter`, `approve`, `decreaseAllowance`, `increaseAllowance`, and ending with the `totalSupply` function. The `totalSupply` function is extremely important for this `KaseiCoin` contract, as it displays the amount of `MARS` tokens we have minted at any point of the contract. 
+
+Step 14: `Account 3` Buy 1 Ether in `MARS` Tokens
+
+![Account 3 Buy MARS Tokens](Evaluation_Evidence/fourteen_address3_buy_tokens.png)
+
+We are now assuming the role of investors in the Crowdsale. 
+If we are the owner of `Account 3`, we would make sure I was interacting with the functions of the `KaseiCoinCrowdsale` contract. Finf the `buyTokens` function. In the imput field provided, enter your account address. Once you click the `buyTokens` button, MetaMask will ask you to confirm the transaction, and you should then be able to verify your balances in Remix, MetaMask, and Ganache. 
