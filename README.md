@@ -78,4 +78,29 @@ Step 6: `KaseiCoinCrowdsaleDeployer` contract deployment verification
 
 From the sidebar, pick the correct contract, in this case the `KaseiCoinCrowdsaleDeployer` contract. Click on the arrow for the `Deploy` function, name the token `KaseiCoin`, give it a symbol of `MARS`, and select the wallet that will be the beneficiary (owner) of this contract. Click `transact`, and once it is confirmed through Metamask, you'll see the confirmation like the one from the image above. 
 
-Step 7: 
+Step 7: MetaMask Deployment
+
+![MetaMask Deployment](Evaluation_Evidence/seven_matamask_deployment.png)
+
+In the image, we can see that `Account 2` in MetaMask dployed the contract through Remix on February 11. 
+
+Step 8: MetaMask Deployment Confirmation
+
+![MetaMask Deployment Confirmation](Evaluation_Evidence/eight_metamask_deployment_two.png)
+
+We can see that the account ending in `...E41` is the `msg.sender`. In other words, we have confirmed that `Account 2` deployed the contract successfully. 
+
+Step 9: Deployment to Ganache
+
+![Deployment to Ganache](Evaluation_Evidence/nine_ganache_deployment.png)
+
+We can verify through Ganache that the contract was executed. There is a red display on the right-hand side that says `Contract Creation`. This, along with the transaction hash, which is prominently displayed, give us our contract creation confirmation. 
+
+Awesome! We have compiled and successfully deployed our `KaseiCoinCrowdsaleDeployer` contract. Now we will use this contract to deploy the 2 remaining contracts. 
+
+Step 10: `KaseiCoinCrowdsale` contract deployment
+
+![KaseiCoinCrowdsale Contract Deployment](Evaluation_Evidence/ten_crowdsale_contract_deployment.png)
+
+TO deploy the `KaseiCoinCrowdsale` contract, we make sure we select the right contract from the dropdown list. In this case, we need to select `KaseiCoinCrowdsale - KaseiCoinCrowdsale.sol`. Then, from the `KaseiCoinCrowdsaleDeployer` contract functions, click on the `kasei_crowdsale_address` button. Copy the address that is returned. Then, just below the `Deploy` button, you will see a `At Address` button, followed by an input field. Make sure you paste the copied `kasei_crowdsale_address` and click the button. This will deploy the `KaseiCoinCrowdsale` contract.
+
