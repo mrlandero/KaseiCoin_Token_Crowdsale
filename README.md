@@ -17,3 +17,17 @@ This project leverages solidity 0.5.0 with the following packages:
 **[OpenZeppelin Crowdsale Contract](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/Crowdsale.sol)** - Crowdsale is a base contract for managing a token crowdsale, allowing investors to purchase tokens with ether. This contract implements such functionality in its most fundamental form and can be extended to provide additional functionality and/or custom behavior
 
 **[OpenZeppelin Minted Crowdsale Contract](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/emission/MintedCrowdsale.sol)** - Extension of Crowdsale contract whose tokens are minted in each purchase. Token ownership should be transferred to MintedCrowdsale for minting
+
+---
+
+## Installation Guide
+
+There are 2 applications that should be downloaded to work with this program:
+
+1. Ganache
+
+**[Ganache Test BlockChain](https://trufflesuite.com/ganache/)** - Follow the installation instructions for your Operating System. 
+
+2. Metamask
+
+**[Metamask Digital Wallet](https://metamask.io/)** - Follow the installation instructions for your Operating System.
