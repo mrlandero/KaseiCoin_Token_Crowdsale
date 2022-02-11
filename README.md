@@ -49,3 +49,33 @@ Step 2: Compile the `KaseiCoinCrowdsale` contract
 ![KaseiCoinCrowdsale Compiled Contract](Evaluation_Evidence/two_kaseicoin_crowdsale_compile.png)
 
 Once again, the green checkmark we see by the Solidity `S` lets us know that we compiled this contract successfully.
+
+Step 3: Compile the `KaseiCoinCrowdsaleDeployer` contact
+
+![KaseiCoinCrowdsaleDeployer Contract](Evaluation_Evidence/three_kaseicoin_crowdsale_deployer.png)
+
+Finally, the green checkmark we see by the Solidity `S` lets us know that we compiled this contract successfully.
+
+Great! We have successfully compiled all 3 contracts for our new token.
+
+Step 4: Connect to MetaMask
+
+![Connect to MetaMask](Evaluation_Evidence/four_connect_to_metamask.png)
+
+The preceding image shows us that we are connected to Metamask and we have 4 active accounts. 
+These accounts were imported from Ganache. 
+
+Step 5: Deploy the `KaseiCoinCrowdsaleDeployer` contract
+
+![Deploy KaseiCoinCrowdsaleDeployer Contract](Evaluation_Evidence/five_deploying_contract.png)
+
+We can see from the above image that Remix is asking MetaMask for confirmation of the deployment. This lets us know that Remix, Ganache, and MetaMask are all working as expected. 
+Once we click `Confirm`, the `KaseiCoinCrowdsaleDeployer` contract will be deployed. 
+
+Step 6: `KaseiCoinCrowdsaleDeployer` contract deployment verification
+
+![KaseiCoinCrowdsaleDeployer Contract Deployment Verification](Evaluation_Evidence/six_deployment_proof.png)
+
+From the sidebar, pick the correct contract, in this case the `KaseiCoinCrowdsaleDeployer` contract. Click on the arrow for the `Deploy` function, name the token `KaseiCoin`, give it a symbol of `MARS`, and select the wallet that will be the beneficiary (owner) of this contract. Click `transact`, and once it is confirmed through Metamask, you'll see the confirmation like the one from the image above. 
+
+Step 7: 
