@@ -24,4 +24,7 @@ contract KaseiCoinCrowdsaleDeployer {
         string memory name,
         string memory symbol,
         address payable wallet // This address will receive all of the Ether raised by the sale
-    )
+    ) public {
+        // Create the KaseiCoin and keep its address handy
+        KaseiCoin token = new KaseiCoin(name, symbol, 0);
+        kasei_token_address = address(token);
