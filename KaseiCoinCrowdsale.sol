@@ -19,3 +19,9 @@ contract KaseiCoinCrowdsale is Crowdsale, MintedCrowdsale {
 contract KaseiCoinCrowdsaleDeployer {
     address public kasei_token_address;
     address public kasei_crowdsale_address;
+
+    constructor(
+        string memory name,
+        string memory symbol,
+        address payable wallet // This address will receive all of the Ether raised by the sale
+    )
