@@ -28,3 +28,7 @@ contract KaseiCoinCrowdsaleDeployer {
         // Create the KaseiCoin and keep its address handy
         KaseiCoin token = new KaseiCoin(name, symbol, 0);
         kasei_token_address = address(token);
+
+        // Create the KaseiCoinCrowdsale and tell it about the token
+        KaseiCoinCrowdsale kasei_crowdsale = new KaseiCoinCrowdsale(1, wallet, token);
+        kasei_crowdsale_address = address(kasei_crowdsale);
