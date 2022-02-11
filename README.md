@@ -31,3 +31,21 @@ There are 2 applications that should be downloaded to work with this program:
 2. Metamask
 
 **[Metamask Digital Wallet](https://metamask.io/)** - Follow the installation instructions for your Operating System.
+
+---
+
+## Usage
+
+To use the 'KaseiCoin Token Crowdsale' application, simply clone the repository and import the code in both the `KaseiCoinMintable.sol` and `KaseiCoinCrowdsale.sol` files into the Remix IDE. 
+
+Step 1: Compile the `KaseiCoin` contract
+
+![KaseiCoin Compiled Contract](Evaluation_Evidence/one_kaseicoin_compile.png)
+
+The green checkmark we see by the Solidity `S` lets us know that we compiled this contract successfully. 
+
+Step 2: Compile the `KaseiCoinCrowdsale` contract
+
+![KaseiCoinCrowdsale Compiled Contract](Evaluation_Evidence/two_kaseicoin_crowdsale_compile.png)
+
+Once again, the green checkmark we see by the Solidity `S` lets us know that we compiled this contract successfully.
