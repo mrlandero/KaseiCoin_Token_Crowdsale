@@ -15,3 +15,7 @@ contract KaseiCoinCrowdsale is Crowdsale, MintedCrowdsale {
             // Constructor can stay empty
         }
 }
+
+contract KaseiCoinCrowdsaleDeployer {
+    address public kasei_token_address;
+    address public kasei_crowdsale_address;
