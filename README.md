@@ -324,3 +324,9 @@ That's it! Our KaseiCoin Crowdsale is running and the functions are doing exactl
 
 **Created by:** Tony Landero<br>
 **Email:** mr.landero@gmail.com<br>
+
+---
+
+## License
+
+MIT
