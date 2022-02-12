@@ -38,7 +38,7 @@ There are 2 applications that should be downloaded to work with this program:
 
 To use the 'KaseiCoin Token Crowdsale' application, simply clone the repository and import the code in both the `KaseiCoinMintable.sol` and `KaseiCoinCrowdsale.sol` files into the Remix IDE. 
 
-Step 1: Compile the `KaseiCoin` contract
+Step 1: Compile the `KaseiCoin` Contract
 
 ![KaseiCoin Compiled Contract](Evaluation_Evidence/one_kaseicoin_compile.png)
 
@@ -129,4 +129,22 @@ Step 14: `Account 3` Buy 1 Ether in `MARS` Tokens
 ![Account 3 Buy MARS Tokens](Evaluation_Evidence/fourteen_address3_buy_tokens.png)
 
 We are now assuming the role of investors in the Crowdsale. 
-If we are the owner of `Account 3`, we would make sure I was interacting with the functions of the `KaseiCoinCrowdsale` contract. Finf the `buyTokens` function. In the imput field provided, enter your account address. Once you click the `buyTokens` button, MetaMask will ask you to confirm the transaction, and you should then be able to verify your balances in Remix, MetaMask, and Ganache. 
+If we are the owner of `Account 3`, we would make sure we were interacting with the functions of the `KaseiCoinCrowdsale` contract. Find the `buyTokens` function. In the input field provided, enter your account address. Once you click the `buyTokens` button, MetaMask will ask you to confirm the transaction, and you should then be able to verify your balances in Remix, MetaMask, and Ganache. Make sure you enter a value in the input field named `VALUE`. It is located right above the contract drop-down menu. For this example, `Account 3` is purchasing 1 Ether, or 1,000,000,000,000,000,000 wei. Due to our rate of 1, `Account 3` will then receive an equal number of tokens to the amount of wei the account sends the contract. 
+
+Step 15: Purchase Confirmation After `Account 3` Purchase
+
+![Purchase Confirmation After Account 3 Purchase](Evaluation_Evidence/fifteen_purchase_confirmation.png)
+
+We can see in the `terminal` view the confirmation of the transaction. It returns a green check mark with a status of `"true Transaction mined and execution succed"`. It also provides important information such as the transaction hash, the account beneficiary, as well as a verification of the amount of tokens purchased, in wei. 
+
+Step 16: MetaMask Purchase Confirmation
+
+![MetaMask Purchase Confirmation](Evaluation_Evidence/sixteen_metamask_buy_confirmation.png)
+
+Here is another way to verify the latest transaction. `Account 3` ending in `...5cDA` purchased 1 ETH worth of `MARS`. It called the contract address, ending in `...179b`, to accomplish this transaction. Once the gas fees have been added, the total amount of ETH is displayed. The status od the transaction also lets us know it has been `Confirmed`. 
+
+Step 17: Ganache Purchase Confirmation
+
+![Ganache Purchase Confirmation](Evaluation_Evidence/seventeen_purchase_ganache_confirmation.png)
+
+Finally, one more way of validating that our transaction was successful. NAvigate to Ganache and click the `TRANSACTIONS` tab. You will now see both transactions the contract has generated. The first was our `Contract Creation`, or deployment. Now, we can see the second transaction with a blue label reading `Contract Call`. This is where `Account 3` is purchasing 1 ETH worth of `MARS` tokens. Ganache also provides us the transaction hash, as well as the `msg.sender` and contract addresses. 
