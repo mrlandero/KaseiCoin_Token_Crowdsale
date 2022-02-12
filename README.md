@@ -202,7 +202,7 @@ Step 25: Purchase Confirmation After `Account 4` Purchase
 
 ![Purchase Confirmation After Account 4 Purchase](Evaluation_Evidence/twentyfive_purchase_confirmation.png)
 
-We can see in the `terminal` view the confirmation of the transaction. It returns a green check mark with a status of `"true Transaction mined and execution succed"`. It also provides important information such as the transaction hash, the account beneficiary, as well as a verification of the amount of tokens purchased, in wei.
+We can see in the `terminal` view the confirmation of the transaction. It returns a green check mark with a status of `"true Transaction mined and execution succed"`. It also provides important information such as the transaction hash, the address beneficiary, as well as a verification of the amount of tokens purchased, in wei.
 
 Step 26: MetaMask Purchase Confirmation
 
@@ -214,7 +214,7 @@ Step 27: Ganache Purchase Confirmation
 
 ![Ganache Purchase Confirmation](Evaluation_Evidence/twentyseven_purchase_ganache_confirmation.png)
 
-Finally, one more way of validating that our transaction was successful. Navigate to Ganache and click the `TRANSACTIONS` tab. You will now see all transactions the contract has generated. The first was our `Contract Creation`, or deployment. Now, we can see the second transaction with a blue label reading `Contract Call`. This is where `Account 3` is purchasing 1 ETH worth of `MARS` tokens. Ganache also provides us the transaction hash, as well as the `msg.sender` and contract addresses. The third transaction has a blue label reading `Contract Call`. This is where `Account 4` is purchasing 2 ETH worth of `MARS` tokens. Ganache also provides us the transaction hash, as well as the `msg.sender` and contract addresses.
+Finally, one more way of validating that our transaction was successful. Navigate to Ganache and click the `TRANSACTIONS` tab. You will now see all transactions the contract has generated. The first was our `Contract Creation`, or deployment. Now, we can see the second transaction with a blue label reading `Contract Call`. This is where `Account 3` is purchasing 1 ETH worth of `MARS` tokens. The third transaction has a blue label reading `Contract Call`. This is where `Account 4` is purchasing 2 ETH worth of `MARS` tokens. Ganache also provides us the transaction hash, as well as the `msg.sender` and contract addresses.
 
 Step 28: `Account 4` Balance
 
@@ -260,3 +260,41 @@ Step 34: `Account 2` Buy 3 Ether in `MARS` Tokens
 ![Account 2 Buy 3 Ether in MARS Tokens](Evaluation_Evidence/thirtyfour_address2_buy_tokens.png)
 
 If we are the owner of `Account 2`, we would make sure we were interacting with the functions of the `KaseiCoinCrowdsale` contract. Find the `buyTokens` function. In the input field provided, enter your account address. Once you click the `buyTokens` button, MetaMask will ask you to confirm the transaction, and you should then be able to verify your balances in Remix, MetaMask, and Ganache. Make sure you enter a value in the input field named `VALUE`. It is located right above the contract drop-down menu. For this example, `Account 2` is purchasing 3 Ether, or 3,000,000,000,000,000,000 wei. Due to our rate of 1, `Account 2` will then receive an equal number of tokens to the amount of wei the account sends the contract.
+
+Step 35: Purchase Confirmation After `Account 2` Purchase
+
+![Purchase Confirmation After Account 2 Purchase](Evaluation_Evidence/thirtyfive_purchase_confirmation.png)
+
+We can see in the `terminal` view the confirmation of the transaction. It returns a green check mark with a status of `"true Transaction mined and execution succed"`. It also provides important information such as the transaction hash, the address beneficiary, as well as a verification of the amount of tokens purchased, in wei.
+
+Step 36: MetaMask Purchase Confirmation
+
+![MetaMask Purchase Confirmation](Evaluation_Evidence/thirtysix_metamask_buy_confirmation.png)
+
+Here is another way to verify the latest transaction. `Account 2` ending in `...2E41` purchased 3 ETH worth of `MARS`. It called the contract address, ending in `...179b`, to accomplish this transaction. Once the gas fees have been added, the total amount of ETH is displayed. The status of the transaction also lets us know it has been `Confirmed`.
+
+Step 37: Ganache Purchase Confirmation
+
+![Ganache Purchase Confirmation](Evaluation_Evidence/thirtyseven_purchase_ganache_confirmation.png)
+
+Finally, one more way of validating that our transaction was successful. Navigate to Ganache and click the `TRANSACTIONS` tab. You will now see all transactions the contract has generated. The first was our `Contract Creation`, or deployment. Now, we can see the second transaction with a blue label reading `Contract Call`. This is where `Account 3` is purchasing 1 ETH worth of `MARS` tokens. The third transaction has a blue label reading `Contract Call`. This is where `Account 4` is purchasing 2 ETH worth of `MARS` tokens. The fourth, and final, transaction has a blue label reading `Contract Call`. This is where `Account 2` is purchasing 3 ETH worth of `MARS` tokens. Ganache also provides us the transaction hash, as well as the `msg.sender` and contract addresses.
+
+Step 38: `Account 2` Balance
+
+![Account 2 Balance](Evaluation_Evidence/thirtyeight_address2_balance.png)
+
+Make sure that you are interacting with the correct contract. You should click the arrow just to the left of the `KaseiCoin` contract. This will display all of the functions available to us. Scroll until you see the function `balanceOf`. We need to type the `Account 2` address, ending in `...2E41`, and then press the blue `call` button. This will display the current balance, in tokens, for `Account 2`.
+
+Step 39: `Account 2` Balance Confirmation
+
+![Account 2 Balance Confirmation](Evaluation_Evidence/thirtynine_address2_balance_confirmation.png)
+
+Once we click the `call` button, there are two ways to verify our balance in Remix. First, the sidebar will display the balance, in tokens, the account owns. Right below the `call` button of the `balanceOf` function, we can see that the account has a balance of 3,000,000,000,000,000,000, in wei, worth of MARS tokens.
+There is also the `terminal` view in Remix. In the terminal, the very first thing we see at the top is "call to KaseiCoin.balanceOf". This lets us know that this function was called. The execution log follows. Notice the input matches the last 4 digits of `Account 2`. Finally, the decoded output is the balance, in wei, of tokens, and the transaction hash is also provided. We can see that both the balance in the sidebar and in the terminal match, so we have viewed the account's balance.
+
+Step 40: Import Tokens to `Account 2`
+
+![Import Tokens to Account 2](Evaluation_Evidence/forty_address2_import_tokens.png)
+
+When we are ready to import our tokens to our MetaMask wallet, we need to click on `Import Tokens` in MetaMask, in the input field labeled `Token Contract Address` enter the token address, ending in `...4249`. The Token Symbol `MARS`, and the Token Decimal (18), as well. Once the current information is automatically filled in, click on the blue button, `Add Custom Token`, and our tokens will be sent into our MetaMask wallet for storage.
+
