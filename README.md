@@ -167,3 +167,28 @@ Step 20: Import Tokens to `Account 3`
 ![Import Tokens to Account 3](Evaluation_Evidence/twenty_address3_import_tokens.png)
 
 When we are ready to import our tokens to our MetaMask wallet, we need to click on `Import Tokens` in MetaMask, in the input field labeled `Token Contract Address` enter the token address, ending in `...4249`. The Token Symbol `MARS`, and the Token Decimal (18), as well. Once the current information is automatically filled in, click on the blue button, `Add Custom Token`, and out tokens will be sent into our MetaMask wallet for storage. 
+
+Step 21: `Address 3` Token Import Confirmation
+
+![Address 3 Token Import Confirmation](Evaluation_Evidence/twentyone_address3_token_confirmation.png)
+
+If we navigate back to MetaMask, we can now see in the `Assets` tab, for `Account 3`, we now have 1 `MARS` token. That is in addition to 98.9979 ETH. 
+
+Congratulations! You have now purchased and transferred a `MARS` token to your MetaMask wallet. 
+
+Step 22: Token Total Supply After First Purchase
+
+![Token Total Supply After First Purchase](Evaluation_Evidence/twentytwo_total_supply_first_purchase.png)
+
+Once again, there are two main ways for us to verify the total supply of `MARS` tokens minted. First, in the Remix sidebar, navigate to the `KaseiCoin` contract and click on it to view its functions. Scroll until you see the last function called `totalSupply`. Once you click on the button, you should see the total amount of minted tokens. In this case, since `Account 3` purchased 1 ETH worth of tokens, we have a `totalSupply` of 1,000,000,000,000,000,000 tokens after the first purchase. The other way to verify would be trhough the `terminal` view of Remix. Here we can see at the top that a call was made to `KaseiCoin.totalSupply`. It displays who the `msg.sender` is and the contract address, the hash for this contract call, and finally the `decoded output` displays the same `totalSupply` as we saw in the sidebar. 
+
+Step 23: Wei Raised After First Purchase
+
+![Wei Raised After First Purchase](Evaluation_Evidence/twentythree_wei_raised_first_purchase.png)
+
+Finally, we can view the amount of wei raised from the Crowdsale. In order to do so, navigate to the `KaseiCoinCrowdsale` contract tab, under `Deployed Contracts`, to display its functions. Scroll to the last function, `weiRaised`, and click the button. This example displays a `weiRaised` value of 1,000,000,000,000,000,000, right under the `weiRaised` button. This makes sense considering we are exchanging 1 wei for 1 token, that being our `rate`. Like with other functions, we can also validate the transaction via the `terminal`. The very first line we see states `"call to KaseiCoinCrowdsale.weiRaised"`. It provides the `msg.sender` and contract addresses, as well as the hash for this call. We can see the `decoded output` is exactly what we expected, and matches the amount we saw in from the sidebar. 
+
+Great! We have now deployed our 3 contracts, connected Ganache, Remix, and MetaMask, and processed a purchase transaction. We were also able to see our confirmations via Ganache and MetaMask. Most importantly, we were able to see how many tokens have been minted, and how much money, in wei, we have raised from our Crowdsale.
+
+We will complete 2 more transactions to really test the `totalSupply` and `weiRaised` functions.
+
