@@ -44,13 +44,13 @@ Step 1: Compile the `KaseiCoin` Contract
 
 The green checkmark we see by the Solidity `S` lets us know that we compiled this contract successfully. 
 
-Step 2: Compile the `KaseiCoinCrowdsale` contract
+Step 2: Compile the `KaseiCoinCrowdsale` Contract
 
 ![KaseiCoinCrowdsale Compiled Contract](Evaluation_Evidence/two_kaseicoin_crowdsale_compile.png)
 
 Once again, the green checkmark we see by the Solidity `S` lets us know that we compiled this contract successfully.
 
-Step 3: Compile the `KaseiCoinCrowdsaleDeployer` contact
+Step 3: Compile the `KaseiCoinCrowdsaleDeployer` Contact
 
 ![KaseiCoinCrowdsaleDeployer Contract](Evaluation_Evidence/three_kaseicoin_crowdsale_deployer.png)
 
@@ -148,3 +148,22 @@ Step 17: Ganache Purchase Confirmation
 ![Ganache Purchase Confirmation](Evaluation_Evidence/seventeen_purchase_ganache_confirmation.png)
 
 Finally, one more way of validating that our transaction was successful. NAvigate to Ganache and click the `TRANSACTIONS` tab. You will now see both transactions the contract has generated. The first was our `Contract Creation`, or deployment. Now, we can see the second transaction with a blue label reading `Contract Call`. This is where `Account 3` is purchasing 1 ETH worth of `MARS` tokens. Ganache also provides us the transaction hash, as well as the `msg.sender` and contract addresses. 
+
+Step 18: `Account 3` Balance
+
+![Account 3 Balance](Evaluation_Evidence/eighteen_address3_balance.png)
+
+Make sure that you are interacting with the correct contract. You should click the arrow just to the left of the `KaseiCoin` contract. This will display all of the functions available to us. Scroll until you see the function `balanceOf`. We need to type the `Account 3` address, ending in `...5cDA`, and then press the blue `call` button. This will display the current balance, in tokens, for `Account 3`.
+
+Step 19: `Account 3` Balance Confirmation
+
+![Account 3 Balance Confirmation](Evaluation_Evidence/nineteen_address3_balance_confirmation.png)
+
+Once we click the `call` button, there are two ways to verify our balance in Remix. First, the sidebar will display the balance, in tokens, the account owns. Right below the `call` button of the `balanceOf` function, we can see that the account has a balance of 1,000,000,000,000,000,000, in wei, worth of MARS tokens.
+There is also the `terminal` view in Remix. In the terminal, the very first thing we see at the top is "call to KaseiCoin.balanceOf". This lets us know that this function was called. The execution log follows. Notice the input matches the last 4 digits of `Account 3`. Finally, the decoded output is the balance, in wei, of tokens, and the transaction hash is also provided. We can see that both the balance in the sidebar and in the terminal match, so we have viewed the account's balance. 
+
+Step 20: Import Tokens to `Account 3`
+
+![Import Tokens to Account 3](Evaluation_Evidence/twenty_address3_import_tokens.png)
+
+When we are ready to import our tokens to our MetaMask wallet, we need to click on `Import Tokens` in MetaMask, in the input field labeled `Token Contract Address` enter the token address, ending in `...4249`. The Token Symbol `MARS`, and the Token Decimal (18), as well. Once the current information is automatically filled in, click on the blue button, `Add Custom Token`, and out tokens will be sent into our MetaMask wallet for storage. 
