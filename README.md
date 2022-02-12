@@ -318,3 +318,9 @@ Finally, we can view the amount of wei raised from the Crowdsale. In order to do
 
 That's it! Our KaseiCoin Crowdsale is running and the functions are doing exactly what we expect them to do. We have successfully launched a new token for a Crowdsale.
 
+---
+
+## Contributors
+
+**Created by:** Tony Landero<br>
+**Email:** mr.landero@gmail.com<br>
